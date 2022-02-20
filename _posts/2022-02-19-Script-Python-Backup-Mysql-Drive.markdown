@@ -202,7 +202,7 @@ Selecio as Caixa de Seleção e click em  ```  Continue  ``` \
 ![PythonExecucao4](/assets/ScriptBackupMysqlDrive/PythonExecucao4.png)
 
 
-Agora so esperar o Codigo Finalizar
+Agora só esperar o Codigo Finalizar \
 ![PythonExecucao5](/assets/ScriptBackupMysqlDrive/PythonExecucao5.png)
 
 Ao Finalizar será Criado um aquivo ``` credentials.json ``` que sera usado nas proximas execução do script não será mais solicidado nada
