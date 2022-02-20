@@ -73,9 +73,6 @@ Click em ```  SAVE AND CONTINUE  ``` \
 Click em ```  BACK TO DASHBOARD  ``` \
 ![TelaAPI&ServicesGoogleDriveAPIConsent7](/assets/ScriptBackupMysqlDrive/TelaAPI&ServicesGoogleDriveAPIConsent7.png)
 
-Click em ```  BACK TO DASHBOARD  ``` \
-![TelaAPI&ServicesGoogleDriveAPIConsent7](/assets/ScriptBackupMysqlDrive/TelaAPI&ServicesGoogleDriveAPIConsent7.png)
-
 Click em ```   Credentials  ``` , depois em  ```  CREATE CREDENTIALS  ``` e depois ```  OAuth client ID  ``` \
 ![TelaAPI&ServicesGoogleDriveAPIClientID2](/assets/ScriptBackupMysqlDrive/TelaAPI&ServicesGoogleDriveAPIClientID2.png)
 
