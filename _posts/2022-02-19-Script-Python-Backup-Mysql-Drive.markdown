@@ -178,7 +178,7 @@ import datetime
 gauth = GoogleAuth()           
 drive = GoogleDrive(gauth) 
 Database = "TestesBackup"
-NomeArquivo = Database +"-"+datetime.datetime.now().strftime("%d-%m-%Y") +".sql.gz"
+NomeArquivo = Database +"-"+datetime.datetime.now().strftime("%d-%m-%Y") +".gz"
 LocalArquivo  = '"'+os.getcwd() + "/" + NomeArquivo+'"'
 LocalConfig = '"'+os.getcwd() + "/config.cnf" +'"'
 os.system('mysqldump --defaults-extra-file='+ LocalConfig +' --databases '+Database+' -f | gzip > '+LocalArquivo+'')
