@@ -31,9 +31,12 @@ url: "https://patrickcaloriocarvalho.github.io/" # the base hostname & protocol 
 github_username: patrickcaloriocarvalho
 
 # Build settings
-theme: minima
+remote_theme: jekyll/minima
 plugins:
   - jekyll-feed
+
+minima:
+  skin: dark
 
 # Exclude from processing.
 # The following items will not be processed, by default.
