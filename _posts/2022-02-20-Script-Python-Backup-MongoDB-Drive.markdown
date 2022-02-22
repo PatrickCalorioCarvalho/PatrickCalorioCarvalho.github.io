@@ -2,7 +2,7 @@
 layout: post
 title:  "Script Python Backup MongoDB Drive"
 date:   2022-02-20 00:00:00 -0300
-categories: test
+categories: Script
 ---
 ## Criando Token de Acesso ao Google Drive
 

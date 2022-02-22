@@ -2,7 +2,7 @@
 layout: post
 title:  "Script Python Backup Mysql Drive"
 date:   2022-02-19 14:49:00 -0300
-categories: test
+categories: Script
 ---
 ## Criando Token de Acesso ao Google Drive
 

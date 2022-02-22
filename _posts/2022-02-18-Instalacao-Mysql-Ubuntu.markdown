@@ -2,7 +2,7 @@
 layout: post
 title:  "Instalação Mysql no Ubunto"
 date:   2022-02-18 00:53:10 -0300
-categories: test
+categories: SO
 ---
 
 Atualizar Index de pacotes
