@@ -5,8 +5,6 @@ image: "img/CodeWarPython2025.png"
 date:   2025-06-23
 ---
 
-# 🏆 Code War: Edição Python + Análise de Dados
-
 Seja bem-vindo(a) ao campeonato **Code War**! Esta edição é focada em habilidades práticas com **Python**, **análise de dados**, **boas práticas de desenvolvimento**, e **visualização**.
 
 ### Para mais detalhes, veja a [Documentação Oficial](https://patrickcaloriocarvalho.github.io/CodeWarPython2025/).

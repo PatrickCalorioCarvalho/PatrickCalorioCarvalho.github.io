@@ -4,7 +4,6 @@ subtitle: "Projeto de Classificação de Imagens com MinIO e TensorFlow"
 image: "img/OColecionador.png"
 date: 2025-04-01
 ---
-# OColecionador - Projeto de Classificação de Imagens com MinIO e TensorFlow
 
 ## Descrição
 O **OColecionador** tem como objetivo capturar imagens pelo aplicativo mobile (React Native), enviá-las para um backend em Node.js, armazená-las em um bucket no MinIO e gerar automaticamente variações dessas imagens (rotação e mudança de coloração) para treinamento de um modelo de classificação com Python e TensorFlow. O modelo treinado pode ser utilizado posteriormente pelo backend ou por outro serviço para classificação automática de imagens.
