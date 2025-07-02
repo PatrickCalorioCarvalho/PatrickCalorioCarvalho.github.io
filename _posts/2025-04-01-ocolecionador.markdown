@@ -1,6 +1,6 @@
 ---
 title:  "OColecionador"
-subtitle: "Projeto de Classificação de Imagens com MinIO e TensorFlow"
+subtitle: "Classificação de Imagens com MinIO e TensorFlow"
 image: "img/OColecionador.png"
 date: 2025-04-01
 ---

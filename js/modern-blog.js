@@ -45,6 +45,15 @@ var demo = (function (window) {
     /**
      * Initialise demo.
      */
+
+    function gerarCorFriaAleatoria() {
+        const hue = Math.floor(Math.random() * 80) + 180;     // Azul a roxo
+        const saturation = 40 + Math.random() * 30;           // Moderada
+        const lightness = 15 + Math.random() * 20;            // Escura
+        return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+    }
+    const paletaFria = Array.from({ length: 10 }, gerarCorFriaAleatoria);
+
     var init = function () {
 
         // For options see: https://github.com/qrohlf/Trianglify
@@ -54,8 +63,8 @@ var demo = (function (window) {
             cell_size: 90,
             variance: 1,
             stroke_width: 1,
-            x_colors: 'random',
-            y_colors: 'random'
+            x_colors: paletaFria,
+            y_colors: paletaFria
         }).svg(); // Render as SVG.
 
         _mapPolygons(pattern);
