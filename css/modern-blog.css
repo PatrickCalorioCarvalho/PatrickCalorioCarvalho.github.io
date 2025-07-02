@@ -356,3 +356,11 @@ a:focus {
 	-webkit-transform: scale(1)!important;
 	transform: scale(1)!important;
 }
+.frase {
+	font-size: 12px;
+	margin-bottom: 1px;
+}
+.autor {
+	font-size: 10px;
+	color: rgb(40, 40, 40);
+}

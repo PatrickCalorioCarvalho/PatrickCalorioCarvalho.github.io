@@ -65,6 +65,8 @@ var demo = (function (window) {
         _bindHashChange();
 
         _triggerOpenCard('', _getHashFromURL(location.href));
+
+        carregarFrase();
     };
 
     /**
@@ -310,6 +312,18 @@ var demo = (function (window) {
             _triggerOpenCard(oldHash, newHash);
         });
     };
+    var carregarFrase = async function () {
+        try {
+        const resposta = await fetch("https://raw.githubusercontent.com/moraislucas/MeMotive/master/phrases.json");
+        const frases = await resposta.json();
+        const aleatoria = frases[Math.floor(Math.random() * frases.length)];
+        document.getElementById("frase").textContent = `"${aleatoria.quote}"`;
+        document.getElementById("autor").textContent = aleatoria.author ? `— ${aleatoria.author}` : "— Desconhecido";
+        } catch (erro) {
+            document.getElementById("frase").textContent = `"Transmita o que aprendeu. Força, mestria. Mas fraqueza, insensatez, fracasso também. Sim, fracasso acima de tudo. O maior professor, o fracasso é"`;
+            document.getElementById("autor").textContent = `Mestre Yoda`;
+        }
+    }
 
     // Expose methods.
     return {
