@@ -323,7 +323,7 @@ var demo = (function (window) {
     };
     var carregarFrase = async function () {
         try {
-        const resposta = await fetch("https://raw.githubusercontent.com/moraislucas/MeMotive/master/phrases.json");
+        const resposta = await fetch("https://raw.githubusercontent.com/moraislucas/MeMotive/refs/heads/master/phrases.json");
         const frases = await resposta.json();
         const aleatoria = frases[Math.floor(Math.random() * frases.length)];
         document.getElementById("frase").textContent = `"${aleatoria.quote}"`;
