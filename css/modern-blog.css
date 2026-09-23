@@ -50,11 +50,12 @@
 .card__content {
 	position: relative;
 	width: 100%;
-	max-width: 800px;
+	max-width: 960px;
 	height: auto;
 	margin: 400px auto 60px;
 	padding: 30px 40px 22px;
-	background: #fff;
+	background: #1c1f24;
+	border-radius: 12px 12px 0 0;
 }
 
 .card__container--closed .card__content {
@@ -66,7 +67,7 @@
 
 .card__caption {
 	font-size: 2em;
-	max-width: 800px;
+	max-width: 960px;
 	margin: 0 auto;
 	padding: 35px 30px 0px;
 }
@@ -84,7 +85,7 @@
 	font-size: 1.5em;
 	line-height: 1;
 	margin: 5px 0 0 0;
-	color: #3b393d;
+	color: #eef1f5;
 }
 
 .card__container--closed .card__title {
@@ -95,7 +96,7 @@
 	font-size: .95em;
 	line-height: 1;
 	margin: 5px 0 0;
-	color: #777778;
+	color: #9aa3ad;
 }
 
 .card__container--closed .card__subtitle {
@@ -103,16 +104,56 @@
 }
 
 .card__copy {
-	font-size: 1.25em;
-	max-width: 900px;
+	font-size: 1.15em;
+	line-height: 1.7;
+	max-width: 1040px;
 	margin: 0 auto;
 	padding: 25px 30px 100px;
-	color: #3b393d;
+	color: #d7dce2;
 }
 
 .card__copy p:first-of-type {
-	font-size: 1.5em;
+	font-size: 1.35em;
 	padding: 0 0 1em 0;
+}
+
+.card__copy h2 {
+	margin-top: 1.4em;
+	padding-bottom: .35em;
+	color: #eef1f5;
+	border-bottom: 1px solid rgba(255, 255, 255, .08);
+}
+
+.card__copy strong {
+	color: #f3f5f8;
+}
+
+.card__copy code {
+	font-family: Consolas, 'Courier New', monospace;
+	font-size: .85em;
+	padding: .15em .4em;
+	border-radius: 4px;
+	background: rgba(255, 255, 255, .08);
+	color: #7be6a8;
+}
+
+.card__copy table {
+	width: 100%;
+	margin: 1em 0;
+	font-size: .8em;
+	border-collapse: collapse;
+}
+
+.card__copy th,
+.card__copy td {
+	padding: .6em .8em;
+	border: 1px solid rgba(255, 255, 255, .1);
+	text-align: left;
+}
+
+.card__copy th {
+	background: rgba(255, 255, 255, .05);
+	color: #eef1f5;
 }
 
 .card__btn-close {
@@ -121,7 +162,12 @@
 	top: 0;
 	right: 0;
 	padding: 36px;
+	color: #9aa3ad;
 	cursor: pointer;
+}
+
+.card__btn-close:hover {
+	color: #39ff88;
 }
 
 .card__container--closed .card__btn-close {
@@ -205,7 +251,7 @@
 }
 
 body {
-	font-family: Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
+	font-family: 'Inter', Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
 	line-height: 1.5;
 	color: #3b393d;
 	background: #16181c;
@@ -237,7 +283,7 @@ a {
 
 a:hover,
 a:focus {
-	color: #3b393d;
+	color: #39ff88;
 }
 
 .body {
