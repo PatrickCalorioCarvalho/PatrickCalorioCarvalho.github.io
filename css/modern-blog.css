@@ -21,13 +21,6 @@
 	-webkit-overflow-scrolling: touch;
 }
 
-/* Guarantee scroll on the open post even if the open-animation's
-   inline "overflow: hidden" (set by the GSAP timeline) is left
-   behind by an interrupted/failed tween. */
-.card__container:not(.card__container--closed) {
-	overflow-y: auto !important;
-}
-
 .card__container--closed {
 	position: absolute;
 	overflow: hidden;
