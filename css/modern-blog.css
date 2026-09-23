@@ -208,7 +208,7 @@ body {
 	font-family: Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
 	line-height: 1.5;
 	color: #3b393d;
-	background: #f0f0f0;
+	background: #16181c;
 	background-size: cover;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -241,7 +241,7 @@ a:focus {
 }
 
 .body {
-	background: #acaad1;
+	background: #16181c;
 }
 
 .body a {

@@ -47,9 +47,9 @@ var demo = (function (window) {
      */
 
     function gerarCorFriaAleatoria() {
-        const hue = Math.floor(Math.random() * 80) + 180;     // Azul a roxo
-        const saturation = 40 + Math.random() * 30;           // Moderada
-        const lightness = 15 + Math.random() * 20;            // Escura
+        const hue = Math.floor(Math.random() * 40) + 200;     // Azul-acinzentado neutro
+        const saturation = 6 + Math.random() * 10;            // Bem baixa, tipo tema de sistema
+        const lightness = 9 + Math.random() * 9;              // Bem escura
         return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
     }
     const paletaFria = Array.from({ length: 10 }, gerarCorFriaAleatoria);
