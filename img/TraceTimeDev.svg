@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1200">
+  <defs>
+    <linearGradient id="bgTrace" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f1712"/>
+      <stop offset="100%" stop-color="#16261e"/>
+    </linearGradient>
+    <radialGradient id="glowTrace" cx="72%" cy="32%" r="60%">
+      <stop offset="0%" stop-color="#5be27a" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#5be27a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1200" fill="url(#bgTrace)"/>
+  <rect width="1920" height="1200" fill="url(#glowTrace)"/>
+
+  <!-- stopwatch -->
+  <g transform="translate(1300,320)">
+    <rect x="-18" y="-96" width="36" height="26" rx="6" fill="#0d1a14" stroke="#3a5646" stroke-width="5"/>
+    <line x1="-40" y1="-118" x2="-24" y2="-100" stroke="#5be27a" stroke-width="8" stroke-linecap="round"/>
+    <line x1="40" y1="-118" x2="24" y2="-100" stroke="#5be27a" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="0" cy="30" r="150" fill="#0d1a14" stroke="#3a5646" stroke-width="8"/>
+    <circle cx="0" cy="30" r="150" fill="none" stroke="#5be27a" stroke-width="8" stroke-dasharray="180 763" stroke-linecap="round"/>
+    <line x1="0" y1="30" x2="0" y2="-70" stroke="#5be27a" stroke-width="6" stroke-linecap="round"/>
+    <line x1="0" y1="30" x2="70" y2="30" stroke="#5be27a" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+    <circle cx="0" cy="30" r="10" fill="#5be27a"/>
+  </g>
+
+  <text x="140" y="620" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="112" font-weight="700" fill="#edf6ef">TraceTime</text>
+  <rect x="145" y="650" width="140" height="10" fill="#5be27a"/>
+  <text x="140" y="720" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="38" fill="#a9c2ac">Cronômetro de bandeja que lança tempo no GitLab</text>
+</svg>

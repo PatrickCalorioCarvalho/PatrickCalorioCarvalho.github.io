@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1200">
+  <defs>
+    <linearGradient id="bgTiao" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161210"/>
+      <stop offset="100%" stop-color="#26201a"/>
+    </linearGradient>
+    <radialGradient id="glowTiao" cx="72%" cy="32%" r="60%">
+      <stop offset="0%" stop-color="#ffa53d" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#ffa53d" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1200" fill="url(#bgTiao)"/>
+  <rect width="1920" height="1200" fill="url(#glowTiao)"/>
+
+  <!-- car silhouette + wrench -->
+  <g transform="translate(1100,320)">
+    <path d="M 20 60 Q 40 -20 140 -20 L 300 -20 Q 380 -20 400 60 L 430 60 Q 460 60 460 90 L 460 120 L 20 120 L 20 90 Q 20 60 20 60 Z"
+          fill="#1a140f" stroke="#ffa53d" stroke-width="6"/>
+    <circle cx="90" cy="130" r="34" fill="#0f0b08" stroke="#ffa53d" stroke-width="6"/>
+    <circle cx="380" cy="130" r="34" fill="#0f0b08" stroke="#ffa53d" stroke-width="6"/>
+    <rect x="150" y="-10" width="120" height="60" rx="8" fill="#0f0b08" stroke="#ffa53d" stroke-width="4" opacity="0.8"/>
+  </g>
+  <g transform="translate(1440,150) rotate(35)" fill="none" stroke="#ffa53d" stroke-width="10" stroke-linecap="round">
+    <path d="M 0 0 L 90 90"/>
+    <path d="M -14 -14 a 24 24 0 1 0 28 28 a 24 24 0 1 0 -28 -28 Z" fill="#ffa53d" stroke="none" opacity="0.9"/>
+  </g>
+
+  <text x="140" y="640" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="100" font-weight="700" fill="#f7ede2">Tião Garagem</text>
+  <rect x="145" y="670" width="140" height="10" fill="#ffa53d"/>
+  <text x="140" y="740" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="38" fill="#c9b7a6">Diário de bordo offline para carro e moto</text>
+</svg>

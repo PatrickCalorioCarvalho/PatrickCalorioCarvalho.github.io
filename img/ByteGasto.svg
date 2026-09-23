@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1200">
+  <defs>
+    <linearGradient id="bgByteGasto" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#120a1e"/>
+      <stop offset="100%" stop-color="#1d1130"/>
+    </linearGradient>
+    <radialGradient id="glowByteGasto" cx="72%" cy="32%" r="60%">
+      <stop offset="0%" stop-color="#f5b301" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#f5b301" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1200" fill="url(#bgByteGasto)"/>
+  <rect width="1920" height="1200" fill="url(#glowByteGasto)"/>
+
+  <!-- chat bubble with a coin -->
+  <g transform="translate(1140,260)">
+    <path d="M 0 20 q 0 -20 20 -20 h 420 q 20 0 20 20 v 220 q 0 20 -20 20 h -300 l -70 70 v -70 h -50 q -20 0 -20 -20 z"
+          fill="#170f26" stroke="#4a3d66" stroke-width="6"/>
+    <path d="M 60 90 L 260 90" stroke="#2ed3c6" stroke-width="8" stroke-linecap="round"/>
+    <path d="M 60 140 L 340 140" stroke="#4a3d66" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="380" cy="210" r="70" fill="#0f0a1a" stroke="#f5b301" stroke-width="8"/>
+    <text x="380" y="228" text-anchor="middle" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="60" font-weight="700" fill="#f5b301">R$</text>
+  </g>
+
+  <text x="140" y="620" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="108" font-weight="700" fill="#f6efe0">ByteGasto</text>
+  <rect x="145" y="650" width="140" height="10" fill="#f5b301"/>
+  <text x="140" y="720" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="38" fill="#c8b8d6">Controle de gastos por voz, direto no Telegram</text>
+</svg>

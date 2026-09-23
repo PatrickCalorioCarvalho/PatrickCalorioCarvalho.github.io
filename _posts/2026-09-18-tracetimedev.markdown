@@ -1,7 +1,7 @@
 ---
 title:  "TraceTime"
 subtitle: "Cronômetro de bandeja que lança tempo direto no GitLab"
-image: "img/TraceTimeDev.png"
+image: "img/TraceTimeDev.svg"
 date: 2026-09-18
 ---
 

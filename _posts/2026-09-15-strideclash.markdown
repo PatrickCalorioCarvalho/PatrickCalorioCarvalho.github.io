@@ -1,7 +1,7 @@
 ---
 title:  "StrideClash"
 subtitle: "Conquiste território real caminhando, com GPS e PostGIS"
-image: "img/StrideClash.png"
+image: "img/StrideClash.svg"
 date: 2026-09-15
 ---
 

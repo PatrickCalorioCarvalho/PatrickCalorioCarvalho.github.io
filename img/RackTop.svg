@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1200">
+  <defs>
+    <linearGradient id="bgRackTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#160f10"/>
+      <stop offset="100%" stop-color="#241619"/>
+    </linearGradient>
+    <radialGradient id="glowRackTop" cx="72%" cy="32%" r="60%">
+      <stop offset="0%" stop-color="#ff3b5c" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#ff3b5c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1200" fill="url(#bgRackTop)"/>
+  <rect width="1920" height="1200" fill="url(#glowRackTop)"/>
+
+  <!-- terminal window with bars -->
+  <g transform="translate(1080,270)">
+    <rect x="0" y="0" width="620" height="380" rx="16" fill="#120c0d" stroke="#4a3236" stroke-width="6"/>
+    <rect x="0" y="0" width="620" height="60" rx="16" fill="#1c1315"/>
+    <circle cx="34" cy="30" r="9" fill="#ff5f57"/>
+    <circle cx="64" cy="30" r="9" fill="#ffbd2e"/>
+    <circle cx="94" cy="30" r="9" fill="#28c840"/>
+    <text x="34" y="130" font-family="Consolas, monospace" font-size="34" fill="#ff3b5c">$ racktop</text>
+    <g fill="#ff3b5c" opacity="0.85">
+      <rect x="34" y="170" width="40" height="150"/>
+      <rect x="90" y="220" width="40" height="100"/>
+      <rect x="146" y="150" width="40" height="170"/>
+      <rect x="202" y="240" width="40" height="80"/>
+      <rect x="258" y="190" width="40" height="130"/>
+    </g>
+    <text x="340" y="230" font-family="Consolas, monospace" font-size="26" fill="#e7d0d3">CPU  62%</text>
+    <text x="340" y="270" font-family="Consolas, monospace" font-size="26" fill="#e7d0d3">GPU  38%</text>
+    <text x="340" y="310" font-family="Consolas, monospace" font-size="26" fill="#e7d0d3">DISK 71%</text>
+  </g>
+
+  <text x="140" y="640" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="112" font-weight="700" fill="#f6ecee">RackTop</text>
+  <rect x="145" y="670" width="140" height="10" fill="#ff3b5c"/>
+  <text x="140" y="740" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="38" fill="#c9a8ad">Monitor de sistema para homelab, direto no terminal</text>
+</svg>

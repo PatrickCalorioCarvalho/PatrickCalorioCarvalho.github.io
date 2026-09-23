@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1200">
+  <defs>
+    <linearGradient id="bgStride" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f0c"/>
+      <stop offset="100%" stop-color="#101a14"/>
+    </linearGradient>
+    <radialGradient id="glowStride" cx="72%" cy="32%" r="60%">
+      <stop offset="0%" stop-color="#39ff6a" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#39ff6a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1200" fill="url(#bgStride)"/>
+  <rect width="1920" height="1200" fill="url(#glowStride)"/>
+
+  <!-- captured territory polygon with a pin -->
+  <g transform="translate(1120,260)">
+    <polygon points="60,260 20,120 160,20 340,60 380,220 220,320" fill="#39ff6a" fill-opacity="0.14" stroke="#39ff6a" stroke-width="6"/>
+    <path d="M 60 260 L 20 120 L 160 20 L 340 60 L 380 220 L 220 320 Z" fill="none" stroke="#39ff6a" stroke-width="6" stroke-dasharray="4 14" opacity="0.6"/>
+    <g transform="translate(200,120)">
+      <path d="M 0 0 C -40 -50 -40 -110 0 -110 C 40 -110 40 -50 0 0 Z" fill="#0d150f" stroke="#39ff6a" stroke-width="7"/>
+      <circle cx="0" cy="-78" r="24" fill="#39ff6a"/>
+    </g>
+  </g>
+
+  <text x="140" y="640" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="104" font-weight="700" fill="#eafcee">StrideClash</text>
+  <rect x="145" y="670" width="140" height="10" fill="#39ff6a"/>
+  <text x="140" y="740" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="38" fill="#a6c4ac">Conquiste território real caminhando, com GPS</text>
+</svg>
