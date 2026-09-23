@@ -73,9 +73,39 @@ var demo = (function (window) {
 
         _bindHashChange();
 
+        _bindOpenPostScroll();
+
         _triggerOpenCard('', _getHashFromURL(location.href));
 
         carregarFrase();
+    };
+
+    /**
+     * Forward mouse wheel scrolling to the open post's scrollable
+     * container no matter where the cursor is over the page, instead
+     * of only scrolling when the cursor happens to be over the card.
+     * @private
+     */
+    var _bindOpenPostScroll = function () {
+
+        window.addEventListener('wheel', function (event) {
+
+            if (!document.body.classList.contains('body--hidden')) {
+                return;
+            }
+
+            var openContainer = document.querySelector(
+                '.card__container:not(.card__container--closed)'
+            );
+
+            if (!openContainer) {
+                return;
+            }
+
+            openContainer.scrollTop += event.deltaY;
+            event.preventDefault();
+
+        }, { passive: false });
     };
 
     /**
