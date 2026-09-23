@@ -2,7 +2,7 @@
 title:  "ByteGasto"
 subtitle: "Controle de gastos por voz, direto no Telegram, com IA rodando em casa"
 image: "img/ByteGasto.svg"
-date: 2026-09-16
+date: 2026-09-18
 ---
 
 ## Descrição

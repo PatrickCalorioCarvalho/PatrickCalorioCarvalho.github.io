@@ -2,7 +2,7 @@
 title:  "RackTop"
 subtitle: "htop moderno para homelab: CPU, Docker, GPU e Proxmox num só terminal"
 image: "img/RackTop.svg"
-date: 2026-09-17
+date: 2026-09-21
 ---
 
 ## Descrição

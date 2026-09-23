@@ -2,7 +2,7 @@
 title:  "DocsSync"
 subtitle: "Documentation as Code: da sincronização automática ao portal central"
 image: "img/DocsSync.svg"
-date: 2026-09-20
+date: 2026-09-19
 ---
 
 ## Descrição

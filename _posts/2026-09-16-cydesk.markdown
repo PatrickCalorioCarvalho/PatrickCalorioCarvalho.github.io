@@ -2,7 +2,7 @@
 title:  "CYD Deck"
 subtitle: "Stream Deck caseiro com uma tela ESP32 de R$70"
 image: "img/CYDesk.svg"
-date: 2026-09-22
+date: 2026-09-16
 ---
 
 ## Descrição

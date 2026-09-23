@@ -2,7 +2,7 @@
 title:  "DroneAutoCuts"
 subtitle: "Highlights automáticos de filmagens de drone com visão computacional"
 image: "img/DroneAutoCuts.svg"
-date: 2026-09-21
+date: 2026-09-15
 ---
 
 ## Descrição

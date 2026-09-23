@@ -2,7 +2,7 @@
 title:  "StrideClash"
 subtitle: "Conquiste território real caminhando, com GPS e PostGIS"
 image: "img/StrideClash.svg"
-date: 2026-09-15
+date: 2026-09-22
 ---
 
 ## Descrição
@@ -23,7 +23,8 @@ O **StrideClash** transforma caminhada real em um jogo de conquista de territór
 - Expor o backend gRPC publicamente por um túnel gratuito exigiu usar HTTP/2 em texto plano (com TLS terminado na borda do túnel), já que o gRPC já fala esse protocolo nativamente.
 
 ## Acesso
-Build de teste para Android disponível para download direto (fora da Play Store) em [github.com/PatrickCalorioCarvalho/StrideClash/releases](https://github.com/PatrickCalorioCarvalho/StrideClash/releases/latest/download/StrideClash.apk).
+- [Página de download do app](https://patrickcaloriocarvalho.github.io/StrideClash/)
+- APK direto: build de teste para Android (fora da Play Store) em [github.com/PatrickCalorioCarvalho/StrideClash/releases](https://github.com/PatrickCalorioCarvalho/StrideClash/releases/latest/download/StrideClash.apk)
 
 ## Repositório
 [github.com/PatrickCalorioCarvalho/StrideClash](https://github.com/PatrickCalorioCarvalho/StrideClash)
