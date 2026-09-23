@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1200">
+  <defs>
+    <linearGradient id="bgCYDash" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12151c"/>
+      <stop offset="100%" stop-color="#1d2430"/>
+    </linearGradient>
+    <radialGradient id="glowCYDash" cx="70%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#ffd54a" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#ffd54a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1200" fill="url(#bgCYDash)"/>
+  <rect width="1920" height="1200" fill="url(#glowCYDash)"/>
+
+  <!-- scoreboard device -->
+  <g transform="translate(1180,300)">
+    <rect x="0" y="0" width="560" height="380" rx="18" fill="#0d1420" stroke="#3a4556" stroke-width="6"/>
+    <rect x="30" y="30" width="500" height="320" rx="8" fill="#0a0f18"/>
+    <text x="280" y="150" text-anchor="middle" font-family="Consolas, monospace" font-size="46" fill="#5be27a">AO VIVO</text>
+    <text x="280" y="250" text-anchor="middle" font-family="Consolas, monospace" font-size="90" font-weight="700" fill="#ffd54a">2 - 1</text>
+    <circle cx="60" cy="360" r="10" fill="#ffd54a"/>
+  </g>
+
+  <!-- microcontroller chip icon -->
+  <g transform="translate(1300,140)" stroke="#ffd54a" stroke-width="4" fill="none" opacity="0.6">
+    <rect x="0" y="0" width="60" height="60" rx="6"/>
+    <line x1="10" y1="-14" x2="10" y2="0"/>
+    <line x1="30" y1="-14" x2="30" y2="0"/>
+    <line x1="50" y1="-14" x2="50" y2="0"/>
+    <line x1="10" y1="60" x2="10" y2="74"/>
+    <line x1="30" y1="60" x2="30" y2="74"/>
+    <line x1="50" y1="60" x2="50" y2="74"/>
+  </g>
+
+  <text x="140" y="620" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="120" font-weight="700" fill="#f2f4f8">CYDash</text>
+  <rect x="145" y="650" width="140" height="10" fill="#ffd54a"/>
+  <text x="140" y="720" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="40" fill="#aab2c0">Placar de futebol ao vivo num display ESP32</text>
+</svg>

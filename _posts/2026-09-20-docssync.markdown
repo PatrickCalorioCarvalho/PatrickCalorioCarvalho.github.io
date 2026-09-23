@@ -1,0 +1,31 @@
+---
+title:  "DocsSync"
+subtitle: "Documentation as Code: da sincronização automática ao portal central"
+image: "img/DocsSync.png"
+date: 2026-09-20
+---
+
+## Descrição
+**DocsSync** e **DocsSyncCLI** formam um ecossistema de documentação com duas peças complementares. A ideia central é aplicar "Documentation as Code + sincronização automatizada": cada projeto mantém seus arquivos Markdown localmente, e a **DocsSyncCLI** (uma CLI em Go, também distribuída como GitHub Action) varre esses arquivos, padroniza o conteúdo e sincroniza tudo automaticamente — via commit e push — para dentro do **DocsSync**, um portal central construído em Docusaurus. O DocsSync ainda resolve um problema comum em documentação: imagens sem descrição. Um microsserviço próprio em FastAPI usa modelos de IA (BLIP para gerar legendas e M2M100 para traduzir para PT-BR) para legendar automaticamente as imagens enviadas, tudo orquestrado atrás de um único proxy Nginx.
+
+## Tecnologias Utilizadas
+**DocsSync (portal central)**
+- Docusaurus 3 (React, TypeScript), Nginx como proxy reverso
+- Backend de assets em FastAPI (Python) com Hugging Face Transformers + PyTorch
+- Modelos de IA: BLIP (legenda de imagem) e M2M100 (tradução EN→PT)
+- Docker Compose orquestrando os três serviços
+
+**DocsSyncCLI**
+- Go, framework de CLI Cobra
+- Integração com Git via linha de comando (clone, commit, push)
+- Distribuída como binário (`go install`) e como GitHub Action
+
+## Desafios de Desenvolvimento
+- Autenticar contra GitHub/GitLab sem depender de APIs específicas de cada plataforma: o token é injetado direto na URL do remote antes de qualquer operação Git, mantendo a CLI simples e universal.
+- Um bug real de CI: repositórios clonados num runner não tinham identidade Git configurada, quebrando o commit automático — corrigido garantindo `user.name`/`user.email` antes de commitar.
+- Rodar os modelos de legenda e tradução via CPU dentro de um container Docker (sem depender de GPU), um trade-off consciente entre portabilidade e velocidade de inferência.
+- Separar corretamente as rotas no Nginx entre a API de upload de imagens e os arquivos estáticos do próprio portal, evitando que uma rota "roubasse" requisições da outra.
+
+## Repositórios
+- [github.com/PatrickCalorioCarvalho/DocsSync](https://github.com/PatrickCalorioCarvalho/DocsSync)
+- [github.com/PatrickCalorioCarvalho/DocsSyncCLI](https://github.com/PatrickCalorioCarvalho/DocsSyncCLI)

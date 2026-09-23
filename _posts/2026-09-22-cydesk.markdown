@@ -1,0 +1,28 @@
+---
+title:  "CYD Deck"
+subtitle: "Stream Deck caseiro com uma tela ESP32 de R$70"
+image: "img/CYDesk.svg"
+date: 2026-09-22
+---
+
+## Descrição
+O **CYD Deck** transforma a mesma placa ESP32 barata com tela touch (a "Cheap Yellow Display") em um macro pad estilo Stream Deck, conectado ao PC via USB serial. A ideia central é dividir bem as responsabilidades: o app no PC (Python + DearPyGui) guarda toda a lógica — menus, configuração e execução de ações como atalhos, abrir programas/URLs, teclas de mídia ou digitar texto — enquanto o firmware do dispositivo (MicroPython) é propositalmente "burro": só desenha a grade de botões recebida em JSON e avisa quando algum foi tocado. Isso mantém o firmware simples e concentra toda a customização no app desktop, que sincroniza o device automaticamente a cada edição salva.
+
+## Tecnologias Utilizadas
+- **PC**: Python 3.10+, DearPyGui (interface), PySerial (protocolo serial customizado)
+- **Automação do SO**: PyAutoGUI, Pynput, Pystray (bandeja do sistema), Pycaw (volume no Windows)
+- **Device**: MicroPython rodando no ESP32-2432S028R, display ILI9341 + touch XPT2046
+- **Persistência**: arquivo `config.json` local
+- **Build**: PyInstaller (gera o executável Windows), GitHub Actions publicando releases automáticas a cada tag
+
+## Desafios de Desenvolvimento
+- Sincronizar a leitura serial (rodando em uma thread separada) com a interface gráfica sem travar nem corromper o estado — a leitura acontece em background e é despejada numa fila thread-safe que a UI drena a cada frame.
+- Calibração de touch é específica de cada unidade física da placa, exigindo um processo manual (tocar os quatro cantos da tela e ler as coordenadas cruas via serial) antes do dispositivo funcionar corretamente.
+- A fonte bitmap do firmware só suporta ASCII — isso levou a guardar dois valores para cada ícone de botão: um emoji (para o preview bonito no desktop) e uma versão ASCII (para o que realmente aparece na tela do dispositivo).
+- Todas as dependências opcionais (bandeja, automação, volume) são carregadas com fallback gracioso, para o app continuar funcionando mesmo se algo não estiver instalado.
+
+## Acesso
+Executável para Windows publicado automaticamente a cada versão em [GitHub Releases](https://github.com/PatrickCalorioCarvalho/CYDeck/releases).
+
+## Repositório
+[github.com/PatrickCalorioCarvalho/CYDeck](https://github.com/PatrickCalorioCarvalho/CYDeck)

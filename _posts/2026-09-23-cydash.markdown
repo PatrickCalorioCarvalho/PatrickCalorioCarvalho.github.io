@@ -1,0 +1,27 @@
+---
+title:  "CYDash"
+subtitle: "Placar de futebol ao vivo num display ESP32"
+image: "img/CYDash.svg"
+date: 2026-09-23
+---
+
+## Descrição
+O **CYDash** transforma uma placa ESP32 barata com tela integrada (a "Cheap Yellow Display", ~R$70) em um placar de futebol standalone: ele busca dados ao vivo na API pública de scoreboard da ESPN via Wi-Fi e desenha o placar direto na tela, sem precisar de celular ou TV ligados. A ideia central é aproveitar que a API da ESPN usa o mesmo formato de JSON para várias ligas — então trocando só a URL o dispositivo acompanha Brasileirão, Premier League, Champions, Libertadores ou qualquer outro campeonato. A cada 30 segundos ele compara o placar anterior com o atual e, se mudar, dispara uma animação de "GOL!" na tela.
+
+## Tecnologias Utilizadas
+- **Hardware**: ESP32 CYD (ESP32-2432S028R), display TFT 240x320 (ILI9341)
+- **Linguagem**: C/C++ (Arduino)
+- **Renderização**: TFT_eSPI
+- **Parsing**: ArduinoJson, com filtro seletivo de campos para economizar RAM
+- **Rede**: WiFi, HTTPClient, WiFiClientSecure (nativas do core ESP32)
+- **Hora**: NTPClient
+- **API externa**: ESPN public scoreboard API (REST/JSON, sem autenticação)
+
+## Desafios de Desenvolvimento
+- A primeira tentativa de fazer *parsing* direto do stream HTTP falhava com erro de input incompleto, porque a API da ESPN usa chunked encoding e o stream cortava antes de terminar — a solução foi ler o payload inteiro antes de parsear.
+- Rodar em um microcontrolador com pouca RAM exigiu usar o filtro de campos do ArduinoJson para extrair só o que interessa de um JSON bem maior.
+- Um bug curioso: a fonte usada inicialmente para o texto "GOL!" só tinha dígitos e símbolos de relógio, sem letras — a tela mostrava o fundo verde da animação, mas nunca a palavra. Resolvido trocando de fonte e redimensionando o texto dinamicamente conforme o tamanho dos nomes dos times.
+- Para evitar flicker em hardware limitado, o relógio no cabeçalho é atualizado isoladamente, e a tela só é redesenhada por completo quando o placar realmente muda.
+
+## Repositório
+[github.com/PatrickCalorioCarvalho/CYDash](https://github.com/PatrickCalorioCarvalho/CYDash)

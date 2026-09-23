@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1200">
+  <defs>
+    <linearGradient id="bgDrone" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141013"/>
+      <stop offset="100%" stop-color="#241a16"/>
+    </linearGradient>
+    <radialGradient id="glowDrone" cx="72%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#ff8a3d" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#ff8a3d" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1200" fill="url(#bgDrone)"/>
+  <rect width="1920" height="1200" fill="url(#glowDrone)"/>
+
+  <!-- drone silhouette -->
+  <g transform="translate(1300,300)" stroke="#ff8a3d" stroke-width="6" fill="none">
+    <line x1="-140" y1="-90" x2="-40" y2="0"/>
+    <line x1="140" y1="-90" x2="40" y2="0"/>
+    <line x1="-140" y1="90" x2="-40" y2="0"/>
+    <line x1="140" y1="90" x2="40" y2="0"/>
+    <circle cx="-140" cy="-90" r="46" opacity="0.85"/>
+    <circle cx="140" cy="-90" r="46" opacity="0.85"/>
+    <circle cx="-140" cy="90" r="46" opacity="0.85"/>
+    <circle cx="140" cy="90" r="46" opacity="0.85"/>
+    <rect x="-40" y="-22" width="80" height="44" rx="10" fill="#ff8a3d" stroke="none"/>
+  </g>
+
+  <!-- film strip / cut -->
+  <g transform="translate(1100,520)">
+    <rect x="0" y="0" width="620" height="120" rx="10" fill="#0e0b0a" stroke="#4a3a33" stroke-width="4"/>
+    <g fill="#2a201b">
+      <rect x="20" y="20" width="60" height="80" rx="4"/>
+      <rect x="100" y="20" width="60" height="80" rx="4"/>
+      <rect x="180" y="20" width="60" height="80" rx="4"/>
+    </g>
+    <path d="M 260 20 L 340 100 M 340 20 L 260 100" stroke="#ff8a3d" stroke-width="8" stroke-linecap="round"/>
+    <g fill="#2a201b">
+      <rect x="380" y="20" width="60" height="80" rx="4"/>
+      <rect x="460" y="20" width="60" height="80" rx="4"/>
+      <rect x="540" y="20" width="60" height="80" rx="4"/>
+    </g>
+  </g>
+
+  <text x="140" y="640" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="104" font-weight="700" fill="#f4ede9">DroneAutoCuts</text>
+  <rect x="145" y="670" width="140" height="10" fill="#ff8a3d"/>
+  <text x="140" y="740" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="38" fill="#c7b8ae">Highlights automáticos de filmagens de drone com visão computacional</text>
+</svg>

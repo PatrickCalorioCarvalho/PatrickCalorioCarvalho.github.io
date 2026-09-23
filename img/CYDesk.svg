@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1200">
+  <defs>
+    <linearGradient id="bgCYDesk" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#101418"/>
+      <stop offset="100%" stop-color="#182430"/>
+    </linearGradient>
+    <radialGradient id="glowCYDesk" cx="72%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#2fe0d6" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#2fe0d6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1200" fill="url(#bgCYDesk)"/>
+  <rect width="1920" height="1200" fill="url(#glowCYDesk)"/>
+
+  <!-- macro pad grid -->
+  <g transform="translate(1160,280)">
+    <rect x="-20" y="-20" width="560" height="420" rx="22" fill="#0c1116" stroke="#33424c" stroke-width="6"/>
+    <g fill="#132029" stroke="#2fe0d6" stroke-width="3">
+      <rect x="10" y="10" width="150" height="120" rx="12"/>
+      <rect x="180" y="10" width="150" height="120" rx="12"/>
+      <rect x="350" y="10" width="150" height="120" rx="12"/>
+      <rect x="10" y="150" width="150" height="120" rx="12"/>
+      <rect x="180" y="150" width="150" height="120" rx="12"/>
+      <rect x="350" y="150" width="150" height="120" rx="12"/>
+    </g>
+    <circle cx="255" cy="220" r="14" fill="#2fe0d6" opacity="0.85"/>
+    <path d="M 255 220 m -34 -34 l 68 68 M 255 220 m 34 -34 l -68 68" stroke="#2fe0d6" stroke-width="4" opacity="0.5"/>
+  </g>
+
+  <!-- usb cable to pc hint -->
+  <path d="M 1160 480 C 1000 520, 900 560, 780 560" stroke="#4b5966" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.6"/>
+
+  <text x="140" y="620" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="112" font-weight="700" fill="#f2f4f8">CYD Deck</text>
+  <rect x="145" y="650" width="140" height="10" fill="#2fe0d6"/>
+  <text x="140" y="720" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="38" fill="#aab2c0">Stream Deck caseiro com uma tela ESP32 de R$70</text>
+</svg>

@@ -1,0 +1,29 @@
+---
+title:  "RackTop"
+subtitle: "htop moderno para homelab: CPU, Docker, GPU e Proxmox num só terminal"
+image: "img/RackTop.png"
+date: 2026-09-17
+---
+
+## Descrição
+O **RackTop** nasceu como alternativa moderna ao `htop` + `docker stats`, pensada para rodar fixa no console de um servidor de homelab sem monitor de gestão dedicado. A ideia central é ter um painel leve, sem dependências pesadas, que detecta sozinho quais recursos existem no host — Docker está rodando? Há GPU NVIDIA? É um nó Proxmox VE? — e mostra apenas as abas que fazem sentido naquele ambiente, sem poluir a tela com informação irrelevante. Ele não depende de agentes nem de APIs remotas: coleta tudo localmente, tanto via biblioteca nativa de métricas de sistema quanto invocando diretamente as CLIs de infraestrutura (Docker, nvidia-smi, Proxmox).
+
+## Tecnologias Utilizadas
+- **Linguagem**: Rust
+- **TUI**: Ratatui + Crossterm
+- **Métricas de sistema**: biblioteca `sysinfo`
+- **Integrações**: Docker CLI, `nvidia-smi`, `pvesh` (Proxmox)
+- **Distribuição**: GitHub Releases, Chocolatey (Windows) e Snap Store (Linux)
+- **Deploy**: binário estático compilado para musl, rodando como serviço systemd fixado no console
+
+## Desafios de Desenvolvimento
+- Compatibilidade de bibliotecas do sistema: o binário precisa ser compilado estaticamente contra musl, porque compilar contra a glibc do ambiente de desenvolvimento geraria um binário incompatível com a versão mais antiga de glibc do servidor de produção.
+- Detectar em tempo de execução quais abas fazem sentido mostrar, evitando telas vazias em hosts sem Docker, GPU ou Proxmox.
+- Fixar o dashboard no console de um servidor que só tem saída HDMI e nenhum teclado físico, exigindo configuração cuidadosa do serviço systemd para assumir o terminal certo sem atrapalhar o login local.
+- As abas de Docker/GPU/Proxmox buscam dados de forma síncrona a cada atualização de tela — um trade-off consciente de simplicidade em troca de uma eventual travadinha ao trocar de aba, já mapeado como próximo passo para uma versão assíncrona.
+
+## Acesso
+Binários e pacotes publicados automaticamente a cada release em [GitHub Releases](https://github.com/PatrickCalorioCarvalho/RackTop/releases), Chocolatey e Snap Store.
+
+## Repositório
+[github.com/PatrickCalorioCarvalho/RackTop](https://github.com/PatrickCalorioCarvalho/RackTop)
